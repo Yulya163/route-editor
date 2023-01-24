@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/route-editor/static/css/main.c88c210a.css",
+    "main.js": "/route-editor/static/js/main.10b0471e.js",
+    "static/js/787.fd7d98b0.chunk.js": "/route-editor/static/js/787.fd7d98b0.chunk.js",
+    "static/media/map-stub.png": "/route-editor/static/media/map-stub.79872523289cd55f20c2.png",
+    "index.html": "/route-editor/index.html",
+    "main.c88c210a.css.map": "/route-editor/static/css/main.c88c210a.css.map",
+    "main.10b0471e.js.map": "/route-editor/static/js/main.10b0471e.js.map",
+    "787.fd7d98b0.chunk.js.map": "/route-editor/static/js/787.fd7d98b0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c88c210a.css",
+    "static/js/main.10b0471e.js"
+  ]
+}
