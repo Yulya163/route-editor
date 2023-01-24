@@ -1,0 +1,16 @@
+.app {
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  .wrapper {
+    margin-right: 30px;    
+  }
+  .map {    
+    &__img {
+      width: 100%;
+    }
+  }
+}

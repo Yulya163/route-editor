@@ -1,0 +1,19 @@
+.points-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 16px;
+    min-height: 40px;
+    box-sizing: border-box;
+    background-color: #eee;
+    border: 1px solid #b4b4b4;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    button {
+        background-color: #fffd95;
+        border: inherit;
+        border-radius: inherit;
+        &:hover {
+            box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.356);
+        }
+    }
+}
