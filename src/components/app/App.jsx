@@ -1,27 +1,22 @@
-import CreatePoint from '../create-point/create-point';
-import { defaultPoints } from '../../mock';
-import PointsList from '../points-list/points-list';
-import './App.scss';
-import map from '../../img/map-stub.png';
 import { useState } from 'react';
+import PointsList from '../points-list/points-list';
+import CreatePoint from '../create-point/create-point';
+import MyMap from '../my-map/my-map';
+
+import './app.scss';
 
 function App() {
-  const [points, setPoints] = useState(defaultPoints);
+  const [points, setPoints] = useState([]);    
+  const [currentMap, setCurrentMap] = useState(null);
 
-  const onRemove = (id) => {
-    setPoints(points.filter(point => point.id !== id))
-  };
-
-  return (
+  return (    
     <div className="app">
-      <div className="wrapper">
-        <CreatePoint onCreate={setPoints}/>  
-        <PointsList points={points} setPoints={setPoints} onRemove={onRemove}/>
-      </div>
-      <div className="map">
-        <img className='map__img' src={map} alt="" />
-      </div>
-    </div>
+      <div className="wrapper">          
+        <CreatePoint onCreate={setPoints} currentMap={currentMap} />  
+        <PointsList points={points} setPoints={setPoints}/>
+      </div>           
+      <MyMap points={points} setPoints={setPoints} setCurrentMap={setCurrentMap}/>
+    </div>    
   );
 }
 

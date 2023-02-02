@@ -3,21 +3,25 @@ import PointsItem from '../points-item/points-item';
 
 import './points-list.scss';
 
-function PointsList({ points = [], setPoints, onRemove }) {
+function PointsList({ points = [], setPoints }) {
+
+    const onRemove = (id) => setPoints(points.filter(point => point.id !== id));
     
     return (
         <Reorder.Group 
-            axis="y" 
+            axis='y' 
             values={points} 
             onReorder={setPoints} 
             className='points-list'
+            data-testid='points-list'
         >        
             {
-                points.map(point => (
+                points && points.map(point => (
                     <PointsItem 
                         point={point} 
                         key={point.id}
-                        onRemove={onRemove}/>
+                        onRemove={onRemove}
+                    />
                 ))
             }
         </Reorder.Group>        

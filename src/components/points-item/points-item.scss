@@ -8,10 +8,14 @@
     border: 1px solid #b4b4b4;
     margin-bottom: 8px;
     border-radius: 4px;
+    word-break: break-word;
     button {
         background-color: #fffd95;
         border: inherit;
         border-radius: inherit;
+        width: 24px;
+        height: 24px;
+        margin-left: 16px;
         &:hover {
             box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.356);
         }

@@ -3,14 +3,17 @@
   padding: 0 15px;
   margin: 30px auto;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content: center;  
   .wrapper {
-    margin-right: 30px;    
+    margin-right: 10px;     
   }
-  .map {    
-    &__img {
-      width: 100%;
-    }
+  .map {   
+    max-width: 600px;
+    min-height: 400px;    
+    min-width: 50%; 
+    background-image: url('../../img/map-stub.png');   
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; 
   }
 }

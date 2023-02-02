@@ -1,42 +1,58 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useYMaps } from '@pbe/react-yandex-maps';
+
 import './create-point.scss';
 
-function CreatePoint({ onCreate }) {  
-    
-    const [newPointValue, setNewPointValue] = useState('');
+function CreatePoint({ onCreate, currentMap }) { 
+    const [pointCoords, setPointsCoords] = useState([]); 
+    const [newPointValue, setNewPointValue] = useState('');    
 
-    const handleChange = (evt) => {
-        setNewPointValue(evt.target.value)
-    };
+    const ymaps = useYMaps(['Map']);  
+
+    useEffect(() => {  
+        if(ymaps && newPointValue) {
+            ymaps.geocode(newPointValue)
+            .then((res) => {         
+                const firstGeoObject = res.geoObjects.get(0);    
+                const coords = firstGeoObject.geometry.getCoordinates();                            
+                setPointsCoords(coords);                   
+            })
+        }  
+    }, [ymaps, newPointValue]);
+
+    const handleInputChange = (evt) => setNewPointValue(evt.target.value);
 
     const handleSubmit = (evt) => {
-        evt.preventDefault();  
-       
-        if(newPointValue) { 
-            onCreate((prevPoints) => [
-                ...prevPoints, 
-                {
-                    id: Date.now(),
-                    name: newPointValue,
+        evt.preventDefault();         
+
+        onCreate((prevPoints) => [
+            ...prevPoints, 
+            {
+                id: Date.now(),
+                name: newPointValue,
+                location: {
+                    center: pointCoords,
+                    zoom: 8
                 }
-            ]);
-            setNewPointValue('');
-        }
-        
-    };
+            }
+        ]);
+
+        setNewPointValue('');         
+        currentMap.setCenter(pointCoords, 14);             
+    };    
 
     return (
         <form             
             className='create-point'
-            onSubmit={handleSubmit}
+            onSubmit={handleSubmit}            
         >
             <input 
                 className='create-point__input' 
                 type='text' 
-                name='point'
-                value={newPointValue}
-                onChange={handleChange}
-                placeholder='Новая точка маршрута' 
+                name='point' 
+                placeholder='Новая точка маршрута'                
+                onChange={handleInputChange} 
+                value={newPointValue}           
             />
         </form>
     )
