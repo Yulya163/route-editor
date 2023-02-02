@@ -2,11 +2,11 @@
 
 ## [Demo](https://yulya163.github.io/route-editor/)
 
-### Для реализации перетаскивания точек маршрута в списке в проекте использовалась библиотека [Frame Motion library](https://www.framer.com/motion/).
+## Для реализации перетаскивания точек маршрута в списке в проекте использовалась библиотека [Frame Motion library](https://www.framer.com/motion/).
 
-### Для создания карты я использовала [Yandex Maps API](https://yandex.ru/dev/maps/jsapi/doc/2.1/quick-start/index.html?from=techmapsmain).
+## Для создания карты я использовала [Yandex Maps API](https://yandex.ru/dev/maps/jsapi/doc/2.1/quick-start/index.html?from=techmapsmain).
 
-### Task Description
+## Task Description
 
 Необходимо реализовать редактор маршрутов — одностраничное приложение, в котором пользователь в интерактивном режиме может создавать на карте маршрут,
 указывая начальную, конечную и промежуточные точки движения. Для каждой точки маршрута можно посмотреть ее адрес. 
@@ -24,7 +24,7 @@
 
 ![2023-02-02_18-32-15](https://user-images.githubusercontent.com/69498488/216352762-07e70625-a18a-4566-b377-f47865133f2a.png)
 
-### Task Functional Requirements
+## Task Functional Requirements
 
 Новая точка маршрута добавляется с помощью ввода ее названия в текстовом поле и нажатия Enter. После этого:
 
@@ -44,7 +44,7 @@
 
 При клике на маркер появляется балун, в балуне отображается название соответствующей ему точки.
 
-### Task Technical Requirements
+## Task Technical Requirements
 
 - Яндекс.Карты или Google Maps.
 
