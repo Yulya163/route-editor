@@ -1,6 +1,6 @@
 ### Практическое задание для вакансии JS-разработчик
 
-##[Demo](https://yulya163.github.io/route-editor/)
+## [Demo](https://yulya163.github.io/route-editor/)
 
 ### Для реализации перетаскивания точек маршрута в списке в проекте использовалась библиотека [Frame Motion library](https://www.framer.com/motion/).
 
