@@ -2,6 +2,8 @@
 
 ## To implement dragging route points in the list, the [Frame Motion library](https://www.framer.com/motion/) is used.
 
+## To create the map , I used the [Yandex Maps API](https://yandex.ru/dev/maps/jsapi/doc/2.1/quick-start/index.html?from=techmapsmain). It is a set of services that allow you to use Yandex cartographic data and technologies in your projects. 
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
