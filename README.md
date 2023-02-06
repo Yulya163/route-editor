@@ -1,10 +1,10 @@
 # Практическое задание для вакансии JS-разработчик
 
-## [Demo](https://yulya163.github.io/route-editor/)
+### [Demo](https://yulya163.github.io/route-editor/)
 
-## Для реализации перетаскивания точек маршрута в списке в проекте использовалась библиотека [Frame Motion library](https://www.framer.com/motion/).
+### Для реализации перетаскивания точек маршрута в списке в проекте использовалась библиотека [Frame Motion library](https://www.framer.com/motion/).
 
-## Для создания карты я использовала [Yandex Maps API](https://yandex.ru/dev/maps/jsapi/doc/2.1/quick-start/index.html?from=techmapsmain).
+### Для создания карты я использовала [Yandex Maps API](https://yandex.ru/dev/maps/jsapi/doc/2.1/quick-start/index.html?from=techmapsmain).
 
 ### Task Description
 
